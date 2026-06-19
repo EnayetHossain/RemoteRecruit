@@ -1,73 +1,133 @@
-# React + TypeScript + Vite
+# Recruit Home
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive landing page built with React, TypeScript, Vite, and Tailwind CSS.  
+The project focuses on smooth UI interactions, animation-rich components, and reusable design patterns.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Project Setup Instructions
 
-## React Compiler
+### 1. Clone the repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone <repository-url>
+cd recruit-home
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2. Install dependencies
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+---
+
+### 3. Start development server
+
+```bash
+npm run dev
+```
+
+The app will be available at:
+
+http://localhost:5173
+
+---
+
+### 4. Build for production
+
+```bash
+npm run build
+```
+
+This generates an optimized production build in the `dist/` folder.
+
+---
+
+### 5. Preview production build
+
+```bash
+npm run preview
+```
+
+---
+
+### 6. Lint the project
+
+```bash
+npm run lint
+```
+
+---
+
+## 🧱 Frameworks & Libraries Used
+
+### Core Stack
+
+- React 19 – UI library
+- TypeScript – Static typing
+- Vite – Build tool
+
+### Styling
+
+- Tailwind CSS 4 – Utility-first CSS
+- @tailwindcss/vite – Vite integration
+
+### UI Utilities
+
+- class-variance-authority – Variant handling
+- clsx – Conditional classes
+- tailwind-merge – Tailwind conflict resolution
+
+### Icons
+
+- react-icons – Icon library
+
+### Linting
+
+- ESLint
+- typescript-eslint
+- eslint-plugin-react-hooks
+- eslint-plugin-react-refresh
+
+---
+
+## 📁 Project Structure
+
+src/
+├── components/
+├── hooks/
+├── assets/
+├── styles/
+├── pages/
+└── lib/
+
+---
+
+## ⚠️ Known Issues / Limitations
+
+### 1. IntersectionObserver-based animations
+Scroll animations rely on IntersectionObserver and may behave inconsistently in older browsers.
+
+### 2. Frontend-only project
+No backend integration; data is static.
+
+### 3. Animation performance
+Heavy animations may affect low-end devices slightly.
+
+### 4. Tailwind v4
+Uses newer Tailwind features that may change in future updates.
+
+### 5. Mobile UX
+Some animations are simplified on mobile for performance.
+
+---
+
+## 📌 Notes
+
+- Reusable component architecture
+- Custom Button system inspired by Shadcn UI
+- Designed for scalable SaaS landing pages
+
