@@ -1,7 +1,7 @@
 import type { PricingPlan } from "../../types/pricingTypes";
 import premium from "../../assets/premium.png"
-import { LuCheck } from "react-icons/lu";
-import { IoCloseSharp } from "react-icons/io5";
+import { FaCheck } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 interface PricingCardProps {
   plan: PricingPlan;
@@ -34,7 +34,7 @@ const Card: React.FC<PricingCardProps> = ({ plan }) => {
             {plan.features.map((feature) => (
               <li key={feature.text} className="flex my-2">
                 <span className={`bg-linear-to-br w-4.5 h-4.5 rounded-full flex items-center justify-center mr-2 ${feature.included ? "from-sky-blue to-deep-blue" : "from-grey-80 to-grey-100"}`}>
-                  {feature.included ? <LuCheck className="text-primary text-xs" /> : <IoCloseSharp className="text-primary text-xs" />}
+                  {feature.included ? <FaCheck className="text-primary text-xs" /> : <IoClose className="text-primary" />}
                 </span>
                 <span className={`text-sm max-w-45 ${feature.included ? "" : "text-grey-100"}`}>{feature.text}</span>
               </li>

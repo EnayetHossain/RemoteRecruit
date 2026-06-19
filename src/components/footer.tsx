@@ -11,7 +11,7 @@ import { FaSnapchatGhost } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative flex flex-col min-h-120 items-center justify-center overflow-visible mt-80">
+    <footer className="relative flex flex-col min-h-120 items-center justify-center overflow-y-visible overflow-x-clip mt-80 before:content=[''] before:absolute before:top-0 before:-right-10 before:w-70 before:h-70 before:bg-primary/15 before:z-1 before:rounded-full">
       <img
         src={footer}
         alt=""
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         className="absolute inset-0 h-full w-full object-cover -z-10"
       />
 
-      <div className="absolute top-[-25%]">
+      <div className="absolute top-[-25%] z-2">
         <CTA />
       </div>
 
@@ -49,6 +49,8 @@ const Footer: React.FC = () => {
           </button>
         </div>
       </div>
+
+      <hr className="absolute bottom-18 w-full border-primary/30" />
 
       <div className="absolute bottom-5">
         <img src={icon} alt="footer icon" className="w-full object-contain" />
