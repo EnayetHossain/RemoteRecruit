@@ -1,6 +1,7 @@
 import useScrollReveal from "../hooks/useScrollReveal";
 import profileImage from "../assets/profile.png";
 import Badge from "./shared/badge";
+import LazyImage from "./shared/lazyImage";
 
 const Profile: React.FC = () => {
   const textRef = useScrollReveal<HTMLDivElement>();
@@ -21,7 +22,7 @@ const Profile: React.FC = () => {
       </div>
 
       <div ref={imageRef} className="reveal-right max-w-120 overflow-hidden">
-        <img src={profileImage} alt="Profile illustration" className="w-full h-full object-contain" />
+        <LazyImage src={profileImage} alt="Profile illustration" className="w-full h-full object-contain" />
       </div>
     </section>
   );

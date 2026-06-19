@@ -3,6 +3,7 @@ import dashbaord from "../assets/dashboard.png";
 import Badge from "./shared/badge";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Button } from "./shared/button";
+import LazyImage from "./shared/lazyImage";
 
 const GetStarted: React.FC = () => {
   const dashboardRef = useScrollReveal<HTMLDivElement>({ threshold: 0.2 });
@@ -18,7 +19,7 @@ const GetStarted: React.FC = () => {
           ref={dashboardRef}
           className="reveal-fade pt-4 pr-4 bg-primary rounded-none sm:rounded-2xl lg:rounded-none lg:rounded-tr-2xl max-w-150 max-h-100 overflow-hidden shadow-2xl shadow-deep-blue/70"
         >
-          <img src={dashbaord} alt="Dashboard image" className="rounded-tr-2xl" />
+          <LazyImage src={dashbaord} alt="Dashboard image" className="rounded-tr-2xl" />
         </div>
 
         <div ref={contentRef} className="reveal-right lg:ml-20 mt-10 mb-10 lg:mb-0">

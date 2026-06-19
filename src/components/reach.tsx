@@ -1,6 +1,7 @@
 import useScrollReveal from "../hooks/useScrollReveal";
 import reachImage from "../assets/reach.png";
 import Badge from "./shared/badge";
+import LazyImage from "./shared/lazyImage";
 
 const Reach: React.FC = () => {
   const textRef = useScrollReveal<HTMLDivElement>();
@@ -21,7 +22,7 @@ const Reach: React.FC = () => {
       </div>
 
       <div ref={imageRef} className="reveal-right max-w-120 overflow-hidden">
-        <img src={reachImage} alt="Reach illustration" className="w-full h-full object-contain" />
+        <LazyImage src={reachImage} alt="Reach illustration" className="w-full h-full object-contain" />
       </div>
     </section>
   );
