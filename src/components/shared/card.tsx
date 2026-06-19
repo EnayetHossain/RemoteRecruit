@@ -2,6 +2,7 @@ import type { PricingPlan } from "../../types/pricingTypes";
 import premium from "../../assets/premium.png"
 import { FaCheck } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { Button } from "./button";
 
 interface PricingCardProps {
   plan: PricingPlan;
@@ -44,14 +45,20 @@ const Card: React.FC<PricingCardProps> = ({ plan }) => {
       </div>
 
       {plan.featured ? (
-        <button className="w-full mt-5 py-3 rounded-2xl bg-linear-to-br from-transparent-blue to-deep-blue text-white cursor-pointer">
+        <Button
+          variant="custom"
+          className="w-full mt-5 rounded-2xl bg-linear-to-br from-transparent-blue to-deep-blue py-3 text-white font-medium"
+        >
           {plan.buttonText}
-        </button>
+        </Button>
       ) : (
         <div className="mt-5 rounded-2xl bg-linear-to-br from-transparent-blue to-deep-blue p-0.5">
-          <button className="w-full rounded-[inherit] bg-primary py-2.5 text-deep-blue">
+          <Button
+            variant="custom"
+            className="w-full rounded-[inherit] bg-primary py-2.5 text-deep-blue font-medium"
+          >
             {plan.buttonText}
-          </button>
+          </Button>
         </div>
       )}
     </div>

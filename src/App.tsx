@@ -7,11 +7,12 @@ import Pricing from './components/pricing'
 import Profile from './components/profile'
 import Reach from './components/reach'
 import Navbar from './components/shared/navbar'
+import ScrollToTop from './components/shared/scrollToTop'
 
 function App() {
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
       <Reach />
@@ -20,6 +21,7 @@ function App() {
       <GetStarted />
       <FAQ />
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }

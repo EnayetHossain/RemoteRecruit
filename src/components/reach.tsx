@@ -1,10 +1,14 @@
+import useScrollReveal from "../hooks/useScrollReveal";
 import reachImage from "../assets/reach.png";
 import Badge from "./shared/badge";
 
 const Reach: React.FC = () => {
+  const textRef = useScrollReveal<HTMLDivElement>();
+  const imageRef = useScrollReveal<HTMLDivElement>({ threshold: 0.1 });
+
   return (
     <section className="max-w-360 mx-auto px-4 my-20 flex flex-col lg:flex-row justify-between items-center">
-      <div className="mb-10 lg:mb-0">
+      <div ref={textRef} className="reveal-left mb-10 lg:mb-0">
         <Badge>Global Reach</Badge>
 
         <h2 className="text-[clamp(2rem,2.4vw,2.5rem)] font-medium flex-1 my-5">
@@ -16,7 +20,7 @@ const Reach: React.FC = () => {
         </p>
       </div>
 
-      <div className="max-w-120 overflow-hidden">
+      <div ref={imageRef} className="reveal-right max-w-120 overflow-hidden">
         <img src={reachImage} alt="Reach illustration" className="w-full h-full object-contain" />
       </div>
     </section>

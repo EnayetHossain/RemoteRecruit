@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import type { PricingPlan } from "../types/pricingTypes";
 import Card from "./shared/card";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const CTA: React.FC = () => {
   const [plans, setPlans] = useState<PricingPlan[]>([]);
+  const sectionRef = useScrollReveal<HTMLElement>({ threshold: 0.2, });
 
   useEffect(() => {
     (async () => {
@@ -17,18 +19,15 @@ const CTA: React.FC = () => {
     })();
   }, []);
 
-
-
   return (
-    <section className="max-w-4xl mx-auto px-4">
-      <h2 className="text-[clamp(2rem,2.4vw,2.5rem)] font-semibold flex-1 text-center mb-8">Help Is One Click Away</h2>
+    <section ref={sectionRef} className="reveal max-w-4xl mx-auto px-4">
+      <h2 className="text-[clamp(2rem,2.4vw,2.5rem)] font-semibold flex-1 text-center mb-8">
+        Help Is One Click Away
+      </h2>
 
       <div className="grid md:grid-cols-2 gap-8">
         {plans.map((plan) => (
-          <Card
-            key={plan.id}
-            plan={plan}
-          />
+          <Card key={plan.id} plan={plan} />
         ))}
       </div>
     </section>

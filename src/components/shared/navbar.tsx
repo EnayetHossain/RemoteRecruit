@@ -1,4 +1,5 @@
 import logo from "../../assets/logo.png"
+import { Button } from "./button";
 
 const Navbar: React.FC = () => {
   return (
@@ -8,8 +9,73 @@ const Navbar: React.FC = () => {
       </div>
 
       <div>
-        <button type="button" className="text-primary px-4 py-2 rounded-xl font-semibold mr-2">Sign In</button>
-        <button type="button" className="bg-button text-primary px-4 py-2 rounded-xl font-semibold">Sign Up</button>
+        <Button variant="ghost" className="mr-2 relative group">
+          <span className="relative inline-flex overflow-hidden">
+            {"Sign In".split("").map((char, i) => {
+              const isSpace = char === " "
+
+              return (
+                <span
+                  key={i}
+                  className="relative inline-block overflow-hidden"
+                  style={{ transitionDelay: `${i * 50}ms` }}
+                >
+
+                  {/* TOP */}
+                  <span
+                    className="block transition-transform duration-500 ease-out group-hover:-translate-y-full"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  >
+                    {isSpace ? "\u00A0" : char}
+                  </span>
+
+                  {/* BOTTOM */}
+                  <span
+                    className="absolute left-0 top-full block transition-transform duration-500 ease-out group-hover:-translate-y-full"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  >
+                    {isSpace ? "\u00A0" : char}
+                  </span>
+
+                </span>
+              )
+            })}
+          </span>
+        </Button>
+
+        <Button className="relative group">
+          <span className="relative inline-flex overflow-hidden">
+            {"Sign In".split("").map((char, i) => {
+              const isSpace = char === " "
+
+              return (
+                <span
+                  key={i}
+                  className="relative inline-block overflow-hidden"
+                  style={{ transitionDelay: `${i * 50}ms` }}
+                >
+
+                  {/* TOP */}
+                  <span
+                    className="block transition-transform duration-500 ease-out group-hover:-translate-y-full"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  >
+                    {isSpace ? "\u00A0" : char}
+                  </span>
+
+                  {/* BOTTOM */}
+                  <span
+                    className="absolute left-0 top-full block transition-transform duration-500 ease-out group-hover:-translate-y-full"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  >
+                    {isSpace ? "\u00A0" : char}
+                  </span>
+
+                </span>
+              )
+            })}
+          </span>
+        </Button>
       </div>
     </nav>
   )

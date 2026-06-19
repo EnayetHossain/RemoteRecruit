@@ -39,6 +39,92 @@
   box-sizing: border-box;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.reveal-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.reveal-delay-100 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-200 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-300 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-400 {
+  transition-delay: 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-fade {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@keyframes arrow-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-in {
+  0% {
+    transform: translateX(-24px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @theme inline {
   --font-poppins: "Poppins", sans-serif;
   --color-primary: var(--primary-color);

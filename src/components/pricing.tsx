@@ -1,14 +1,18 @@
+import useScrollReveal from "../hooks/useScrollReveal";
 import pricingImage from "../assets/pricing.png";
 import Badge from "./shared/badge";
 
 const Pricing: React.FC = () => {
+  const imageRef = useScrollReveal<HTMLDivElement>({ threshold: 0.1 });
+  const textRef = useScrollReveal<HTMLDivElement>();
+
   return (
     <section className="max-w-360 mx-auto px-4 flex flex-col-reverse lg:flex-row justify-between items-center">
-      <div className="max-w-120 overflow-hidden">
+      <div ref={imageRef} className="reveal-left max-w-120 overflow-hidden">
         <img src={pricingImage} alt="Pricing illustration" className="w-full h-full object-contain" />
       </div>
 
-      <div className="mb-10 lg:mb-0">
+      <div ref={textRef} className="reveal-right mb-10 lg:mb-0">
         <Badge>Actually Fee Free</Badge>
 
         <h2 className="text-[clamp(2rem,2.4vw,2.5rem)] font-medium flex-1 my-5">

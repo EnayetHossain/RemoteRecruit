@@ -1,6 +1,9 @@
+import useScrollReveal from "../hooks/useScrollReveal";
 import background from "../assets/background.svg";
 
 const Hero: React.FC = () => {
+  const contentRef = useScrollReveal<HTMLDivElement>({ threshold: 0.2 });
+
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       <img
@@ -10,7 +13,10 @@ const Hero: React.FC = () => {
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="relative z-10 mx-auto max-w-360 px-4 text-center text-white">
+      <div
+        ref={contentRef}
+        className="reveal relative z-10 mx-auto max-w-360 px-4 text-center text-white"
+      >
         <h1 className="text-[clamp(2.5rem,3vw,3.3rem)] font-bold">
           RemoteRecruit’s Difference
         </h1>
