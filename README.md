@@ -11,7 +11,7 @@ The project focuses on smooth UI interactions, animation-rich components, and re
 
 ```bash
 git clone https://github.com/EnayetHossain/RemoteRecruit.git
-cd recruit-home
+cd RemoteRecruit 
 ```
 
 ---
