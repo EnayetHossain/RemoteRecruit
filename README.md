@@ -10,7 +10,7 @@ The project focuses on smooth UI interactions, animation-rich components, and re
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/EnayetHossain/RemoteRecruit.git
 cd recruit-home
 ```
 
@@ -94,34 +94,13 @@ npm run lint
 
 ---
 
-## 📁 Project Structure
-
-src/
-├── components/
-├── hooks/
-├── assets/
-├── styles/
-├── pages/
-└── lib/
-
----
-
 ## ⚠️ Known Issues / Limitations
 
 ### 1. IntersectionObserver-based animations
 Scroll animations rely on IntersectionObserver and may behave inconsistently in older browsers.
 
-### 2. Frontend-only project
-No backend integration; data is static.
-
 ### 3. Animation performance
 Heavy animations may affect low-end devices slightly.
-
-### 4. Tailwind v4
-Uses newer Tailwind features that may change in future updates.
-
-### 5. Mobile UX
-Some animations are simplified on mobile for performance.
 
 ---
 
