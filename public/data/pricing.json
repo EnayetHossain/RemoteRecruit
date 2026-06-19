@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "badge": "",
+    "name": "Free",
+    "priceLabel": "",
+    "billingCycle": "Basic",
+    "buttonText": "Get Started",
+    "featured": false,
+    "features": [
+      {
+        "text": "1 Active Job",
+        "included": true
+      },
+      {
+        "text": "Basic List Placement",
+        "included": true
+      },
+      {
+        "text": "Unlimited Job Applicants",
+        "included": false
+      },
+      {
+        "text": "Invite Anyone to Apply to Your Jobs",
+        "included": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "badge": "Premium",
+    "name": "",
+    "priceLabel": "$79.99",
+    "billingCycle": "Per Month",
+    "buttonText": "Get Started",
+    "featured": true,
+    "features": [
+      {
+        "text": "Unlimited Job Posts",
+        "included": true
+      },
+      {
+        "text": "Instant Job Post Approval",
+        "included": true
+      },
+      {
+        "text": "Premium List Placement",
+        "included": true
+      },
+      {
+        "text": "Unlimited Job Applicants",
+        "included": true
+      }
+    ]
+  }
+]
